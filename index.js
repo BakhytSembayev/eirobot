@@ -39,8 +39,14 @@ function addActionBot(name,src, text){
 addActionBot('btn_1','./img/1.jpg', text.text1)
 addActionBot('btn_2','./img/2.jpg', text.text2)
 addActionBot('btn_3','./img/3.jpg', text.text3)
-bot.launch();
 
+bot.launch({
+    webhook: {
+      domain: 'https://<eirobot>.herokuapp.com/',
+      port: process.env.PORT
+    }
+  });
+  
 // Enable graceful stop
 process.once('SIGINT', () => bot.stop('SIGINT'));
 process.once('SIGTERM', () => bot.stop('SIGTERM'));
