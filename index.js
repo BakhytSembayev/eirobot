@@ -42,7 +42,7 @@ addActionBot('btn_3','./img/3.jpg', text.text3)
 
 bot.launch({
     webhook: {
-      domain: 'https://<eirobot>.herokuapp.com/',
+      domain: 'https://eirobot.herokuapp.com/',
       port: process.env.PORT
     }
   });
